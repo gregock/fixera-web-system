@@ -4,7 +4,8 @@ import https from 'https';
 
 const projectRoot = process.cwd();
 const sitemapPath = path.join(projectRoot, 'public', 'sitemap.xml');
-const baseUrl = 'https://northstar-services.example';
+const sourceBaseUrl = 'https://northstar-services.example';
+const baseUrl = process.env.RUNTIME_SEO_BASE_URL || sourceBaseUrl;
 
 /**
  * @typedef {{
@@ -122,7 +123,7 @@ function readSitemapUrls() {
 
   const xml = fs.readFileSync(sitemapPath, 'utf8');
   const matches = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)];
-  const urls = matches.map(match => match[1].trim());
+  const urls = matches.map(match => match[1].trim().replace(sourceBaseUrl, baseUrl));
 
   if (urls.length === 0) {
     console.error('[RUNTIME-SEO] No <loc> entries found in sitemap.xml');
@@ -222,6 +223,13 @@ async function validateHtmlVariant(variantUrl, targetUrl, failures) {
  * @returns {Promise<void>}
  */
 async function main() {
+  if (!process.env.RUNTIME_SEO_BASE_URL) {
+    console.log(
+      '[RUNTIME-SEO] Skipped: set RUNTIME_SEO_BASE_URL to validate a deployed runtime URL.'
+    );
+    process.exit(0);
+  }
+
   const sitemapUrls = readSitemapUrls();
   /** @type {Failure[]} */
   const failures = [];

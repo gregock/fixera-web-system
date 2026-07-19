@@ -3199,7 +3199,7 @@ h3.text-lg {
   line-height: 1.45;
 }
 
-/* === Northstar Services: Project tag chips (used in Projects list and detail) === */
+/* === Northstar: Project tag chips (used in Projects list and detail) === */
 .chip,
 a.chip {
   display: inline-flex;

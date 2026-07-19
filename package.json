@@ -28,7 +28,7 @@
     "generate:page-manifest": "node tools/generate-page-manifest.mjs",
     "preview": "node scripts/preview.mjs",
     "build:dev": "npm-run-all build:assets build:css build:js build:html",
-    "verify": "npm run build && npm run validate && npm run validate:runtime",
+    "verify": "npm run build && npm run validate",
     "build:full": "npm run build && npm run verify",
     "test": "node --test src/js/*.test.js",
     "lint": "eslint \"src/**/*.js\"",

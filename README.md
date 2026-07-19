@@ -60,7 +60,7 @@ npm run validate
 Runtime validation can be run after serving the built output:
 
 ```bash
-npm run validate:runtime
+RUNTIME_SEO_BASE_URL=https://your-deployment.example npm run validate:runtime
 ```
 
 ## Portfolio Context

@@ -874,7 +874,7 @@ async function initProjects() {
         headline: project.title || "",
         datePublished: project.date || "",
         author: { "@type": "Person", name: "Portfolio Case Study" },
-        publisher: { "@type": "Organization", name: "Northstar Services" },
+        publisher: { "@type": "Organization", name: "Northstar" },
         image: /** @type {Array<{ src?: string; w?: number; h?: number }>} */ (
           (project.images || []).slice(0, 6)
         ).map((im) => ({

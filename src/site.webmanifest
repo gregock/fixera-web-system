@@ -1,6 +1,6 @@
 {
-  "name": "Northstar Services",
-  "short_name": "Northstar Services",
+  "name": "Northstar",
+  "short_name": "Northstar",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

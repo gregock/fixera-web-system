@@ -4,7 +4,7 @@ Last synchronized: 2026-05-22
 
 ## Website Structure
 
-The Northstar Services site is a static bilingual SEO cluster with these page groups:
+The Northstar site is a static bilingual SEO cluster with these page groups:
 
 - homepage
 - services hub

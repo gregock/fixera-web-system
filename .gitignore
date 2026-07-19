@@ -1,0 +1,48 @@
+node_modules/
+public/
+.DS_Store
+# caches/logs
+.vercel/
+.vscode/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
+dist/
+# --- Fixera extras ---
+# reportes y temporales
+reports/
+tools/tmp/
+data-seo/**/*.zip
+*.zip
+*.bak
+package.backup.*.json
+# por si vuelve a colarse
+
+src/.DS_Store
+src/*.bak
+src/tmp_*.csv
+src/tmp_gallery_files.txt
+.vercel
+__pycache__/
+
+# --- Local-only content (not for prod) ---
+data-seo/
+src/Audit/
+src/blog/*.html
+src/tmp_gallery_full.txt
+urls.txt
+public/
+.env*.local
+.claude/
+
+.env
+
+# tooling outputs
+repomix-output.xml
+*context.txt
+
+screenshots/
+artifacts/
+audits/

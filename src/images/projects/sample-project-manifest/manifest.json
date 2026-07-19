@@ -1,0 +1,41 @@
+{
+  "schema": "northstar-image-manifest@1",
+  "scope": "projects",
+  "slug": "sample-project-manifest",
+  "entries": [
+    {
+      "slug": "sample-cover",
+      "role": "cover",
+      "sequence": 1,
+      "alt": "Sample cover image for future project ingestion",
+      "caption": "Placeholder entry showing the required manifest structure.",
+      "width": 1600,
+      "height": 1200,
+      "orientation": "landscape",
+      "service_tags": ["sample", "project-proof"],
+      "location": "copenhagen",
+      "date": "2026-06-29",
+      "source_file": "source/sample-cover.jpg",
+      "derivatives": [],
+      "published": false,
+      "privacy_notes": "Non-published example manifest entry."
+    },
+    {
+      "slug": "sample-detail",
+      "role": "detail",
+      "sequence": 2,
+      "alt": "Sample detail image for future project ingestion",
+      "caption": "Secondary placeholder entry for manifest validation.",
+      "width": 1200,
+      "height": 1600,
+      "orientation": "portrait",
+      "service_tags": ["sample", "detail"],
+      "location": "copenhagen",
+      "date": "2026-06-29",
+      "source_file": "source/sample-detail.jpg",
+      "derivatives": [],
+      "published": false,
+      "privacy_notes": "Non-published example manifest entry."
+    }
+  ]
+}

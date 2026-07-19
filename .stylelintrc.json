@@ -1,0 +1,20 @@
+{
+  "ignoreFiles": ["src/input.css", "src/tailwind.css"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended",
+    "stylelint-config-prettier",
+    "stylelint-config-tailwindcss"
+  ],
+  "rules": {
+    "alpha-value-notation": "number",
+    "color-function-notation": "legacy",
+    "media-feature-range-notation": null,
+    "rule-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "declaration-block-single-line-max-declarations": null,
+    "comment-empty-line-before": null,
+    "no-duplicate-selectors": null,
+    "font-family-name-quotes": null
+  }
+}

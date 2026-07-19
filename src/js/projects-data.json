@@ -1,0 +1,298 @@
+{
+  "projects": [
+    {
+      "slug": "exterior-door-restoration-charlottenlund",
+      "title": "Exterior Door Restoration – Structural Repair & Finish",
+      "summary": "Structural repair and restoration of an exterior door frame, preserving original elements while improving durability and finish.",
+      "date": "2025-11-16",
+      "location": "Charlottenlund · Copenhagen",
+      "locale": "en",
+      "album": "projects",
+      "published": true,
+      "tags": ["wood repair", "exterior", "structural repair", "restoration"],
+      "cover": {
+        "src": "/images/projects/exterior-door-restoration-charlottenlund/cover.webp",
+        "alt": "Restored exterior door frame after structural repair and finishing"
+      }
+    },
+    {
+      "slug": "door-frame-restoration",
+      "title": "Door Frame Restoration",
+      "album": "hp",
+      "date": "2025-10-10",
+      "locale": "en",
+      "cover": {
+        "src": "/images/projects/door-frame-restoration/cover.webp",
+        "w": 1600,
+        "h": 900,
+        "alt": "Door frame base restored and painted, final result"
+      },
+      "summary": "Repair-first rebuild of a rotted door-frame base: damaged timber removed, custom insert fabricated, sealed and finished for Danish weather.",
+      "location": "Copenhagen",
+      "tags": [
+        { "slug": "wood-repair", "label": "Wood repair" },
+        { "slug": "exterior", "label": "Exterior" },
+        { "slug": "rot-repair", "label": "Rot repair" },
+        { "slug": "carpentry", "label": "Carpentry" },
+        { "slug": "eco-first", "label": "Eco-first" },
+        { "slug": "cost-saving", "label": "Cost-saving" }
+      ],
+      "story": [
+        "The client had been quoted nearly DKK 20,000 to replace the entire door frame because the base had rotted. That’s a common answer: full replacement is faster for large companies, but it also means paying to discard 95% of a frame that’s still perfectly sound.",
+        "At Northstar Services I follow a repair-first approach whenever it’s safe and makes sense. It’s usually more affordable, less wasteful, and just as strong. After reviewing the photos, I confirmed this frame could indeed be saved.",
+        "I carefully removed every bit of rotten wood until I reached solid timber, sealed the exposed areas against moisture, fabricated a custom insert, fixed it securely, filled and sanded the surface, and finished with an exterior-grade paint system made for Danish weather.",
+        "The result is a sturdy, aligned frame with clean lines, proper protection, and a far smaller bill than full replacement."
+      ],
+      "images": [
+        {
+          "src": "/images/projects/door-frame-restoration/01.webp",
+          "thumb": "/images/projects/door-frame-restoration/01.webp",
+          "w": 1280,
+          "h": 960,
+          "alt": "Rotten wooden base of the door frame before any work started"
+        },
+        {
+          "src": "/images/projects/door-frame-restoration/02.webp",
+          "thumb": "/images/projects/door-frame-restoration/02.webp",
+          "w": 1280,
+          "h": 960,
+          "alt": "All damaged wood removed, exposing solid timber ready for repair"
+        },
+        {
+          "src": "/images/projects/door-frame-restoration/03.webp",
+          "thumb": "/images/projects/door-frame-restoration/03.webp",
+          "w": 1280,
+          "h": 960,
+          "alt": "Moisture sealing applied before installing the new insert"
+        },
+        {
+          "src": "/images/projects/door-frame-restoration/04.webp",
+          "thumb": "/images/projects/door-frame-restoration/04.webp",
+          "w": 1280,
+          "h": 960,
+          "alt": "Custom insert aligned and fixed in place"
+        },
+        {
+          "src": "/images/projects/door-frame-restoration/05.webp",
+          "thumb": "/images/projects/door-frame-restoration/05.webp",
+          "w": 1280,
+          "h": 960,
+          "alt": "Filling and sanding to achieve a smooth, continuous surface"
+        },
+        {
+          "src": "/images/projects/door-frame-restoration/06.webp",
+          "thumb": "/images/projects/door-frame-restoration/06.webp",
+          "w": 1280,
+          "h": 960,
+          "alt": "Exterior paint applied for weather protection and uniform look"
+        },
+        {
+          "src": "/images/projects/door-frame-restoration/07.webp",
+          "thumb": "/images/projects/door-frame-restoration/07.webp",
+          "w": 1280,
+          "h": 960,
+          "alt": "Detail of the restored and painted door-frame base"
+        },
+        {
+          "src": "/images/projects/door-frame-restoration/08.webp",
+          "thumb": "/images/projects/door-frame-restoration/08.webp",
+          "w": 1280,
+          "h": 960,
+          "alt": "Final wide view of the restored exterior door frame"
+        }
+      ]
+    },
+    {
+      "slug": "curtain-rails-hemming-norrebro-nordvest",
+      "title": "Custom Curtain Rails & Hemming",
+      "summary": "Ceiling-mounted rails with a clean corner joint and hemming to get the exact floor clearance. Simple, durable and smooth to use.",
+      "date": "2025-10-30",
+      "location": "Nørrebro / Nordvest",
+      "locale": "en",
+      "album": "hp",
+      "tags": ["curtains", "ceiling rails", "corner joint", "hemming", "clean finish"],
+      "cover": {
+        "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/cover.webp",
+        "alt": "Ceiling-mounted curtain rail with corner joint in Nørrebro"
+      },
+      "images": [
+        {
+          "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/1.webp",
+          "alt": "Corner-mounted curtain rail cut and joined precisely to follow the wall geometry.",
+          "caption": "L-shaped rail, tight corner alignment for smooth glide."
+        },
+        {
+          "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/2.webp",
+          "alt": "Ceiling-mounted track providing full curtain coverage across bay window opening.",
+          "caption": "Continuous ceiling rail above window opening."
+        },
+        {
+          "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/3.webp",
+          "alt": "Curtains hemmed to achieve clean floor clearance and even bottom edge.",
+          "caption": "Hemming for perfect length and aligned floor line."
+        },
+        {
+          "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/4.webp",
+          "alt": "Ceiling brackets and anchors evenly spaced to distribute curtain load.",
+          "caption": "Anchors and brackets placed for even weight distribution."
+        },
+        {
+          "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/5.webp",
+          "alt": "Finished installation with uniform folds and effortless glide along the rail.",
+          "caption": "Final look: full coverage and smooth glide."
+        }
+      ],
+      "story": [
+        "Client had multiple options in mind. We compared rods vs rails and went for ceiling-mounted aluminum rails to get a full-height look and better light control.",
+        "Rails were cut on-site and joined in the corner; anchors spaced appropriately to avoid sagging.",
+        "Curtains were too long, so we hemmed them to sit 1–2 cm above the floor: cleaner line and smoother glide.",
+        "Tips when choosing: rails are best for tight spaces or ceiling-to-floor coverage; check fabric weight to select proper gliders; plan corner joints and a return-to-wall if you need blackout.",
+        "Client review: “Super friendly, precise work and available on short notice. My go-to for everyday fixes like closet, curtains, table leg repair and wall mounting. Highly recommend!”, Bea V."
+      ]
+    },
+    {
+      "slug": "curtain-rails-hemming-norrebro-nordvest",
+      "title": "Gardin-skinner & oplægning",
+      "summary": "Loftmonterede skinner med pæn hjørnesamling og oplægning for den rette gulvafstand. En enkel, holdbar løsning med let glide.",
+      "date": "2025-10-30",
+      "location": "Nørrebro / Nordvest",
+      "locale": "da",
+      "album": "hp",
+      "tags": ["gardiner", "loftskinner", "hjørnesamling", "oplægning", "rent finish"],
+      "cover": {
+        "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/cover.webp",
+        "alt": "Loftmonteret gardinskinne med hjørnesamling i Nørrebro"
+      },
+      "images": [
+        {
+          "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/1.webp",
+          "alt": "Hjørne-monteret gardinskinne tilpasset præcist efter væggens geometri.",
+          "caption": "L-formet skinne med præcis hjørnesamling for jævn glide."
+        },
+        {
+          "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/2.webp",
+          "alt": "Loftmonteret skinne giver fuld gardindækning over vinduespartiet.",
+          "caption": "Sammenhængende skinne over vinduesåbningen."
+        },
+        {
+          "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/3.webp",
+          "alt": "Gardiner lagt op for ren gulvafstand og lige bundlinje.",
+          "caption": "Oplægning for korrekt længde og pæn afslutning ved gulv."
+        },
+        {
+          "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/4.webp",
+          "alt": "Beslag og plugs fordelt jævnt for stabil montering og let bevægelse.",
+          "caption": "Plugs og beslag placeret for jævn belastning."
+        },
+        {
+          "src": "/images/projects/curtain-rails-hemming-norrebro-nordvest/5.webp",
+          "alt": "Færdig installation med ensartede folder og let glide i skinnen.",
+          "caption": "Slutresultat: fuld dækning og let glide."
+        }
+      ],
+      "story": [
+        "Kunden overvejede flere løsninger. Vi valgte loftskinner for gulv-til-loft udtryk og bedre lyskontrol.",
+        "Skinnerne blev tilpasset på stedet og samlet i hjørnet; plugs/beslag placeret med passende afstand for at undgå nedbøjning.",
+        "Gardinerne var for lange, så vi lagde dem op 1–2 cm over gulvet for en ren linje og bedre glide.",
+        "Tips: vælg skinner når pladsen er trang eller du ønsker fuld højde; match stofvægt med de rigtige glidere; planlæg hjørnesamling og ‘return to wall’ ved behov for mørklægning.",
+        "Kundeanmeldelse: “Super venlig, præcist arbejde og kan komme med kort varsel. Min go-to til hverdagsting: skab, gardiner, bordben og ophæng. Kan varmt anbefales!”, Bea V."
+      ]
+    },
+    {
+      "slug": "cargo-bike-lids-christiania-copenhagen",
+      "title": "Custom Cargo Bike Lids – Secure Storage for Christiania Bikes",
+      "summary": "Reinforced handmade lids for Christiania cargo bikes. Wood or metal edge, daily-use hardware and a padlock-ready latch for safe storage on the go.",
+      "date": "2025-10-30",
+      "location": "Nørrebro / Copenhagen",
+      "locale": "en",
+      "album": "projects",
+      "published": true,
+      "tags": ["custom build", "metalwork", "woodwork", "bike", "security"],
+      "cover": {
+        "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/cover.webp",
+        "alt": "Handmade reinforced lid mounted on a Christiania cargo bike"
+      },
+      "images": [
+        {
+          "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/1.webp",
+          "alt": "Reinforced cargo lid with inner frame and waterproof coating.",
+          "caption": "Reinforced cargo lid with inner frame and waterproof coating."
+        },
+        {
+          "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/2.webp",
+          "alt": "Dry-fit on deck before final assembly and sealing.",
+          "caption": "Dry-fit on deck before final assembly and sealing."
+        },
+        {
+          "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/3.webp",
+          "alt": "Corner bracket fixed with stainless bolts for lasting rigidity.",
+          "caption": "Corner bracket fixed with stainless bolts for lasting rigidity."
+        },
+        {
+          "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/4.webp",
+          "alt": "Inside view: lid brackets and hinge placement tested under load.",
+          "caption": "Inside view: lid brackets and hinge placement tested under load."
+        },
+        {
+          "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/5.webp",
+          "alt": "Lock latch ready for standard padlocks, practical and secure.",
+          "caption": "Lock latch ready for standard padlocks, practical and secure."
+        }
+      ],
+      "story": [
+        "The goal: turn open cargo boxes into safe storage for tools and groceries.",
+        "I built reinforced lids tailored to Christiania Bikes, with either wood or metal edges depending on preference and weight.",
+        "Hinges and a padlock-ready latch make access easy and parking secure.",
+        "Hardware and coatings are chosen for outdoor use to handle Copenhagen weather."
+      ]
+    },
+    {
+      "slug": "cargo-bike-lids-christiania-copenhagen",
+      "title": "Christiania cykel låg – Sikker opbevaring & håndlavet design",
+      "summary": "Forstærkede håndlavede låg til Christiania ladcykler. Træ- eller metalramme, beslag til daglig brug og aflåselig lukning med hængelås.",
+      "date": "2025-10-30",
+      "location": "Nørrebro / København",
+      "locale": "da",
+      "album": "projects",
+      "published": true,
+      "tags": ["specialbyg", "metal", "træ", "cykel", "sikkerhed"],
+      "cover": {
+        "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/cover.webp",
+        "alt": "Håndlavet, forstærket låg monteret på Christiania ladcykel"
+      },
+      "images": [
+        {
+          "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/1.webp",
+          "alt": "Forstærket låg med indvendig ramme og vandafvisende overflade.",
+          "caption": "Forstærket låg med indvendig ramme og vandafvisende overflade."
+        },
+        {
+          "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/2.webp",
+          "alt": "Prøvesamling på værkstedet før endelig montering og forsegling.",
+          "caption": "Prøvesamling på værkstedet før endelig montering og forsegling."
+        },
+        {
+          "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/3.webp",
+          "alt": "Hjørnebeslag monteret med rustfri skruer for ekstra stabilitet.",
+          "caption": "Hjørnebeslag monteret med rustfri skruer for ekstra stabilitet."
+        },
+        {
+          "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/4.webp",
+          "alt": "Indvendigt kig: hængsler og beslag testet under belastning.",
+          "caption": "Indvendigt kig: hængsler og beslag testet under belastning."
+        },
+        {
+          "src": "/images/projects/cargo-bike-lids-christiania-copenhagen/5.webp",
+          "alt": "Låsebeslag klar til hængelås – praktisk og sikkert.",
+          "caption": "Låsebeslag klar til hængelås – praktisk og sikkert."
+        }
+      ],
+      "story": [
+        "Målet var at gøre en åben ladkasse til sikker opbevaring af værktøj og indkøb.",
+        "Jeg byggede specialtilpassede, forstærkede låg til Christiania Bikes – med træ- eller metalramme efter ønske.",
+        "Hængsler og aflåselig lukning giver nem adgang og sikker parkering.",
+        "Beslag og overflader er valgt til udendørs brug og dansk vejr."
+      ]
+    }
+  ]
+}

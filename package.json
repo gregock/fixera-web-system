@@ -1,0 +1,110 @@
+{
+  "name": "service-business-web-system",
+  "version": "1.0.0",
+  "description": "Public-safe portfolio edition of a bilingual service-business website system.",
+  "type": "module",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "clean": "rimraf public && mkdir -p public/css public/js public/images public/icons public/favicon public/fonts",
+    "dev:css": "tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./public/css/style.css --watch",
+    "build:css": "tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./public/css/style.css --minify",
+    "dev:js": "esbuild ./src/js/scripts.js --bundle --outfile=./public/js/scripts.js --watch",
+    "build:js": "esbuild ./src/js/scripts.js --bundle --minify --outfile=./public/js/scripts.js",
+    "dev:html": "npm run build:html && chokidar \"src/**/*.html\" -c \"npm run build:html\" --debounce 200",
+    "build:html": "npx -y html-minifier-terser --input-dir ./src --output-dir ./public --file-ext html --collapse-whitespace --remove-comments --remove-attribute-quotes --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --minify-css true --minify-js true",
+    "dev:assets": "npx -y cpx2 \"src/{images,icons,favicon,fonts}/**/*\" public --watch && npx -y cpx2 src/js/gallery-data.json public/js --watch && { [ -f src/js/projects-data.json ] && npx -y cpx2 src/js/projects-data.json public/js --watch || true; } && { [ -f src/js/ga.js ] && npx -y cpx2 src/js/ga.js public/js --watch || true; } && { [ -f src/js/fb.js ] && npx -y cpx2 src/js/fb.js public/js --watch || true; } && { [ -f src/js/attribution.js ] && npx -y cpx2 src/js/attribution.js public/js --watch || true; } && npx -y cpx2 src/robots.txt public --watch && npx -y cpx2 src/site.webmanifest public --watch && npx -y cpx2 src/llms.txt public --watch",
+    "build:assets": "mkdir -p public/images public/icons public/favicon public/fonts public/js && { [ -d src/images ] && npx -y cpx2 \"src/images/**/*\" public/images || true; } && { [ -d src/icons ] && npx -y cpx2 \"src/icons/**/*\" public/icons || true; } && { [ -d src/favicon ] && npx -y cpx2 \"src/favicon/**/*\" public/favicon || true; } && { [ -d src/fonts ] && npx -y cpx2 \"src/fonts/**/*\" public/fonts || true; } && { [ -f src/js/gallery-data.json ] && npx -y cpx2 src/js/gallery-data.json public/js || true; } && { [ -f src/js/projects-data.json ] && npx -y cpx2 src/js/projects-data.json public/js || true; } && { [ -f src/js/ga.js ] && npx -y cpx2 src/js/ga.js public/js || true; } && { [ -f src/js/fb.js ] && npx -y cpx2 src/js/fb.js public/js || true; } && { [ -f src/js/attribution.js ] && npx -y cpx2 src/js/attribution.js public/js || true; } && { [ -f src/robots.txt ] && npx -y cpx2 src/robots.txt public || true; } && { [ -f src/site.webmanifest ] && npx -y cpx2 src/site.webmanifest public || true; } && { [ -f src/llms.txt ] && npx -y cpx2 src/llms.txt public || true; }",
+    "dev:json": "npx -y cpx2 src/js/gallery-data.json public/js --watch",
+    "dev:manifest": "npx -y cpx2 src/site.webmanifest public --watch",
+    "serve": "browser-sync start --server public --port 5500 --no-ui --files public",
+    "serve:python": "python3 -m http.server 5510 --directory public",
+    "dev:sitemap": "node tools/generate-sitemap.mjs && chokidar \"public/**/*.html\" -c \"node tools/generate-sitemap.mjs\"",
+    "dev": "npm-run-all --parallel dev:css dev:js dev:html dev:assets dev:sitemap serve",
+    "build": "npm run check:no-em-dash && run-s clean build:assets build:css build:js build:html",
+    "postbuild": "node tools/inject-hreflang.mjs && node tools/generate-sitemap.mjs",
+    "validate": "node tools/validate.mjs",
+    "validate:runtime": "node tools/validate-runtime-seo.mjs",
+    "validate:images": "node tools/validate-image-manifests.mjs",
+    "generate:page-manifest": "node tools/generate-page-manifest.mjs",
+    "preview": "node scripts/preview.mjs",
+    "build:dev": "npm-run-all build:assets build:css build:js build:html",
+    "verify": "npm run build && npm run validate && npm run validate:runtime",
+    "build:full": "npm run build && npm run verify",
+    "test": "node --test src/js/*.test.js",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint:fix": "eslint \"src/**/*.js\" --fix",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
+    "format": "prettier --write .",
+    "prepare": "if [ \"$VERCEL\" != \"1\" ]; then husky; fi",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "check:no-em-dash": "node scripts/check-no-em-dash.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.37.0",
+    "@squoosh/cli": "^0.6.4",
+    "autoprefixer": "10.4.21",
+    "browser-sync": "^3.0.4",
+    "chokidar-cli": "^3.0.0",
+    "clean-css-cli": "^5.6.3",
+    "concurrently": "^9.2.0",
+    "cpx2": "^7.0.2",
+    "esbuild": "0.23.1",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-promise": "^6.4.0",
+    "html-minifier-terser": "^7.2.0",
+    "http-server": "14.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "npm-run-all": "^4.1.5",
+    "playwright": "1.60.0",
+    "postcss": "8.5.6",
+    "prettier": "^3.3.3",
+    "rimraf": "^5.0.10",
+    "serve": "14.2.5",
+    "sharp": "^0.34.3",
+    "stylelint": "^16.9.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recommended": "^15.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-tailwindcss": "^0.0.7",
+    "tailwindcss": "3.4.18",
+    "terser": "^5.43.1",
+    "typescript": "5.9.3"
+  },
+  "lint-staged": {
+    "*.{js,cjs,mjs}": [
+      "eslint --fix"
+    ],
+    "*.{css}": [
+      "stylelint --fix --allow-empty-input || true"
+    ],
+    "*.{html,md,json,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregock/service-business-web-system.git"
+  },
+  "keywords": [
+    "portfolio",
+    "static-site",
+    "seo",
+    "bilingual",
+    "runtime-validation",
+    "service-business"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregock/service-business-web-system/issues"
+  },
+  "homepage": "https://github.com/gregock/service-business-web-system#readme",
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {}
+}

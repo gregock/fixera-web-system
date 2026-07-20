@@ -19,13 +19,13 @@
       timestamp: new Date().toISOString(),
     };
 
-    const existingLastTouch = sessionStorage.getItem("northstar_last_touch");
+    const existingLastTouch = sessionStorage.getItem("fixera_last_touch");
     if (hasUtm || !existingLastTouch) {
-      sessionStorage.setItem("northstar_last_touch", JSON.stringify(attribution));
+      sessionStorage.setItem("fixera_last_touch", JSON.stringify(attribution));
     }
 
-    if (!sessionStorage.getItem("northstar_first_touch")) {
-      sessionStorage.setItem("northstar_first_touch", JSON.stringify(attribution));
+    if (!sessionStorage.getItem("fixera_first_touch")) {
+      sessionStorage.setItem("fixera_first_touch", JSON.stringify(attribution));
     }
   } catch {}
 })();

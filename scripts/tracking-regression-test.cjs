@@ -1,6 +1,6 @@
 const { chromium } = require('playwright');
 
-const BASE = 'https://northstar-services.example';
+const BASE = 'https://fixera.net';
 
 const TESTS = [
   {

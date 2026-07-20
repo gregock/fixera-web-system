@@ -7,13 +7,13 @@ Last synchronized: 2026-04-07
 
 Public identity URLs MUST follow the clean URL policy:
 
-- EN leaf pages: extensionless (e.g. `https://northstar-services.example/services/repairs`)
-- DA leaf pages: use `.da` extension (e.g. `https://northstar-services.example/services/repairs.da`)
-- EN nested hubs: use trailing-slash public URLs (e.g. `https://northstar-services.example/areas/`)
-- DA nested hubs: use flat `.da` URLs (e.g. `https://northstar-services.example/areas.da`)
+- EN leaf pages: extensionless (e.g. `https://fixera.net/services/repairs`)
+- DA leaf pages: use `.da` extension (e.g. `https://fixera.net/services/repairs.da`)
+- EN nested hubs: use trailing-slash public URLs (e.g. `https://fixera.net/areas/`)
+- DA nested hubs: use flat `.da` URLs (e.g. `https://fixera.net/areas.da`)
 - projects hub public identity:
-  - `https://northstar-services.example/projects`
-  - `https://northstar-services.example/projects.da`
+  - `https://fixera.net/projects`
+  - `https://fixera.net/projects.da`
 - Danish public routes use `.da`, not `/da/*`, as the public URL pattern
 - `/index.da` is an intentional public identity for the Danish root
 - legacy `.html` entrypoints must redirect directly to the clean URL; redirect chains are not acceptable public identity

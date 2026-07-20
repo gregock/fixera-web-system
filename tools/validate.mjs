@@ -81,7 +81,7 @@ if (fs.existsSync(sitemapPath)) {
 
   matches.forEach(match => {
     const url = match[1];
-    const pathname = url.replace('https://northstar-services.example', '');
+    const pathname = url.replace('https://fixera.net', '');
 
     const filePath = publicUrlPathToFilePath(pathname);
 

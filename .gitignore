@@ -30,7 +30,6 @@ __pycache__/
 # --- Local-only content (not for prod) ---
 data-seo/
 src/Audit/
-src/blog/*.html
 src/tmp_gallery_full.txt
 urls.txt
 public/

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const publicDir = path.resolve('public');
-const BASE_URL = 'https://northstar-services.example';
+const BASE_URL = 'https://fixera.net';
 
 function filePathToPublicUrl(relativePath) {
   const rel = relativePath.replace(/\\/g, '/');
@@ -80,7 +80,7 @@ walk(publicDir, file => {
   if (isNoindex) return;
 
   content = content.replace(
-    /^\s*https:\/\/northstar\.net\/[^\s<]+\s*(?:\r?\n\s*)?\/>\s*$/gim,
+    /^\s*https:\/\/fixera\.net\/[^\s<]+\s*(?:\r?\n\s*)?\/>\s*$/gim,
     ''
   );
 

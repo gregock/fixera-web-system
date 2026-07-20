@@ -1,5 +1,5 @@
 {
-  "schema": "northstar-image-manifest@1",
+  "schema": "fixera-image-manifest@1",
   "scope": "projects",
   "slug": "sample-project-manifest",
   "entries": [

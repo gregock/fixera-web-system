@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /dev/
-Sitemap: https://northstar-services.example/sitemap.xml
+Sitemap: https://fixera.net/sitemap.xml

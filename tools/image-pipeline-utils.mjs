@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 
-export const MANIFEST_SCHEMA = 'northstar-image-manifest@1';
+export const MANIFEST_SCHEMA = 'fixera-image-manifest@1';
 export const ALLOWED_TARGET_TYPES = new Set(['projects', 'services', 'gallery']);
 export const SUPPORTED_IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.heic', '.webp', '.avif']);
 

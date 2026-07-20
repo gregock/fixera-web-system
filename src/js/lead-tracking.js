@@ -2,10 +2,10 @@
 
 /**
  * @typedef {Window & typeof globalThis & {
- *   __northstarLeadTrackBound?: boolean;
+ *   __fixeraLeadTrackBound?: boolean;
  * }} ServiceSiteWindow
  */
-const northstarWindow = /** @type {ServiceSiteWindow} */ (window);
+const fixeraWindow = /** @type {ServiceSiteWindow} */ (window);
 const LEAD_API_URL = "https://example-crm.invalid/api/leads";
 
 function getHrefAttribution(href) {
@@ -29,7 +29,7 @@ function getHrefAttribution(href) {
 
 function getSessionTestFlag() {
   try {
-    return sessionStorage.getItem("northstar_test") === "true";
+    return sessionStorage.getItem("fixera_test") === "true";
   } catch {
     return false;
   }
@@ -38,10 +38,10 @@ function getSessionTestFlag() {
 function persistTestTrafficFromUrl() {
   try {
     const params = new URLSearchParams(window.location.search);
-    const value = (params.get("northstar_test") || "").trim().toLowerCase();
+    const value = (params.get("fixera_test") || "").trim().toLowerCase();
 
     if (value === "1" || value === "true" || value === "yes") {
-      sessionStorage.setItem("northstar_test", "true");
+      sessionStorage.setItem("fixera_test", "true");
       return true;
     }
 
@@ -57,7 +57,7 @@ function isTestTraffic() {
 
 function getPersistedAttribution() {
   try {
-    const raw = sessionStorage.getItem("northstar_last_touch");
+    const raw = sessionStorage.getItem("fixera_last_touch");
     if (!raw) return null;
     const parsed = JSON.parse(raw);
     if (!parsed || typeof parsed !== "object") return null;
@@ -94,8 +94,8 @@ export function getLeadContext() {
 }
 
 export function initLeadAttributionTracking() {
-  if (northstarWindow.__northstarLeadTrackBound) return;
-  northstarWindow.__northstarLeadTrackBound = true;
+  if (fixeraWindow.__fixeraLeadTrackBound) return;
+  fixeraWindow.__fixeraLeadTrackBound = true;
 
   document.addEventListener(
     "click",

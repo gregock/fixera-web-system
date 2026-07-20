@@ -1,8 +1,8 @@
 const { chromium } = require('playwright');
 
 const URLS = [
-  'https://northstar-services.example/contact',
-  'https://northstar-services.example/contact.da',
+  'https://fixera.net/contact',
+  'https://fixera.net/contact.da',
 ];
 
 (async () => {

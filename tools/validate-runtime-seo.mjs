@@ -4,7 +4,7 @@ import https from 'https';
 
 const projectRoot = process.cwd();
 const sitemapPath = path.join(projectRoot, 'public', 'sitemap.xml');
-const sourceBaseUrl = 'https://northstar-services.example';
+const sourceBaseUrl = 'https://fixera.net';
 const baseUrl = process.env.RUNTIME_SEO_BASE_URL || sourceBaseUrl;
 
 /**

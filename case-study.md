@@ -1,4 +1,4 @@
-# Case Study: Service Business Web System
+# Case Study: Fixera Web System
 
 ## Problem
 
@@ -15,6 +15,7 @@ The system treats the website as an operational surface instead of a loose set o
 - Avoid publishing private analytics, lead, or operational exports.
 - Keep SEO work tied to validation rather than manual assumptions.
 - Separate public website code from private business truth.
+- Keep the public Fixera brand usable as a verifiable reference while protecting private operations.
 
 ## What Is Demonstrated
 
@@ -24,11 +25,14 @@ The system treats the website as an operational surface instead of a loose set o
 - Runtime SEO verification.
 - Public-safe tracking boundary documentation.
 - Practical maintenance under live-business constraints.
+- Semi-anonymized publication strategy for an active business.
 
 ## Public Edition Boundary
 
 This edition removes private runtime state, generated reports, operational snapshots, Search Console exports, GA4 exports, lead reports, active execution backlog, and deployment secrets.
 
+The public Fixera brand context may remain because the business and website are publicly visible. Private business operations do not come with it.
+
 The visual media has been replaced with neutral placeholders. This preserves the shape of the asset pipeline while keeping real job and property imagery out of the public repository.
 
-The goal is to show the engineering pattern, not expose private business operations.
+The goal is to show the engineering pattern and provide a verifiable production reference without exposing private business operations.

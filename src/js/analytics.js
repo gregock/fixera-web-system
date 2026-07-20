@@ -8,7 +8,7 @@
  *   fbq?: (...args: any[]) => void;
  * }} ServiceSiteWindow
  */
-const northstarWindow = /** @type {ServiceSiteWindow} */ (window);
+const fixeraWindow = /** @type {ServiceSiteWindow} */ (window);
 
 export function initAnalytics() {
   function getLanguage() {
@@ -99,8 +99,8 @@ export function initAnalytics() {
   }
 
   function getAttributionContext() {
-    var firstTouch = getStoredAttribution("northstar_first_touch");
-    var lastTouch = getStoredAttribution("northstar_last_touch");
+    var firstTouch = getStoredAttribution("fixera_first_touch");
+    var lastTouch = getStoredAttribution("fixera_last_touch");
     if (!firstTouch && !lastTouch) return {};
 
     return {
@@ -183,16 +183,16 @@ export function initAnalytics() {
    */
   function sendGA4(name, params, sourceEl) {
     try {
-      if (typeof northstarWindow.gtag === "function") {
+      if (typeof fixeraWindow.gtag === "function") {
         var p = buildEventParams(params, sourceEl || null);
         var isTestTraffic = false;
         try {
-          isTestTraffic = sessionStorage.getItem("northstar_test") === "true";
+          isTestTraffic = sessionStorage.getItem("fixera_test") === "true";
         } catch (_) {}
-        if (/** @type {any} */ (northstarWindow).__northstarInternalTraffic || isTestTraffic) {
+        if (/** @type {any} */ (fixeraWindow).__fixeraInternalTraffic || isTestTraffic) {
           p.debug_mode = true;
         }
-        northstarWindow.gtag("event", name, p);
+        fixeraWindow.gtag("event", name, p);
       }
     } catch (_) {}
   }
@@ -202,14 +202,14 @@ export function initAnalytics() {
    */
   function sendPixel(name, params) {
     try {
-      if (typeof northstarWindow.fbq === "function") {
-        northstarWindow.fbq("track", name, params || {});
+      if (typeof fixeraWindow.fbq === "function") {
+        fixeraWindow.fbq("track", name, params || {});
       }
     } catch (_) {}
   }
 
-  northstarWindow.sendGA4 = sendGA4;
-  northstarWindow.sendPixel = sendPixel;
+  fixeraWindow.sendGA4 = sendGA4;
+  fixeraWindow.sendPixel = sendPixel;
 
   // Outbound y canales específicos
   document.addEventListener(

@@ -41,7 +41,7 @@ describe('ga.js internal traffic logic', () => {
       },
       URLSearchParams: URLSearchParams,
       document: mockDocument,
-      __northstarInternalTraffic: false,
+      __fixeraInternalTraffic: false,
       dataLayer: [],
       gtag: () => {}
     };
@@ -64,22 +64,22 @@ describe('ga.js internal traffic logic', () => {
     Object.assign(win, context.window);
   };
 
-  it('should set __northstarInternalTraffic to true and call setItem when ?internal=true', () => {
+  it('should set __fixeraInternalTraffic to true and call setItem when ?internal=true', () => {
     mockWindow.location.search = '?internal=true';
     let setItemCalled = false;
     mockWindow.localStorage.setItem = (key, value) => {
-      if (key === 'northstar_internal_traffic' && value === '1') {
+      if (key === 'fixera_internal_traffic' && value === '1') {
         setItemCalled = true;
       }
     };
 
     runScript(mockWindow);
 
-    assert.strictEqual(mockWindow.__northstarInternalTraffic, true);
+    assert.strictEqual(mockWindow.__fixeraInternalTraffic, true);
     assert.strictEqual(setItemCalled, true);
   });
 
-  it('should still set __northstarInternalTraffic to true if localStorage.setItem fails when ?internal=true', () => {
+  it('should still set __fixeraInternalTraffic to true if localStorage.setItem fails when ?internal=true', () => {
     mockWindow.location.search = '?internal=true';
     mockWindow.localStorage.setItem = () => {
       throw new Error('localStorage blocked');
@@ -87,14 +87,14 @@ describe('ga.js internal traffic logic', () => {
 
     runScript(mockWindow);
 
-    assert.strictEqual(mockWindow.__northstarInternalTraffic, true, 'Should set internal traffic even if localStorage fails');
+    assert.strictEqual(mockWindow.__fixeraInternalTraffic, true, 'Should set internal traffic even if localStorage fails');
   });
 
   it('should call removeItem when ?internal=false', () => {
     mockWindow.location.search = '?internal=false';
     let removeItemCalled = false;
     mockWindow.localStorage.removeItem = (key) => {
-      if (key === 'northstar_internal_traffic') {
+      if (key === 'fixera_internal_traffic') {
         removeItemCalled = true;
       }
     };
@@ -104,22 +104,22 @@ describe('ga.js internal traffic logic', () => {
     assert.strictEqual(removeItemCalled, true);
   });
 
-  it('should set __northstarInternalTraffic to true if localStorage flag is present', () => {
+  it('should set __fixeraInternalTraffic to true if localStorage flag is present', () => {
     mockWindow.localStorage.getItem = (key) => {
-      if (key === 'northstar_internal_traffic') return '1';
+      if (key === 'fixera_internal_traffic') return '1';
       return null;
     };
 
     runScript(mockWindow);
 
-    assert.strictEqual(mockWindow.__northstarInternalTraffic, true);
+    assert.strictEqual(mockWindow.__fixeraInternalTraffic, true);
   });
 
-  it('should set __northstarInternalTraffic to true on localhost', () => {
+  it('should set __fixeraInternalTraffic to true on localhost', () => {
     mockWindow.location.hostname = 'localhost';
 
     runScript(mockWindow);
 
-    assert.strictEqual(mockWindow.__northstarInternalTraffic, true);
+    assert.strictEqual(mockWindow.__fixeraInternalTraffic, true);
   });
 });

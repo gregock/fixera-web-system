@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const publicDir = path.resolve('public');
-const BASE_URL = 'https://northstar-services.example';
+const BASE_URL = 'https://fixera.net';
 
 let hasError = false;
 const titleMap = new Map();

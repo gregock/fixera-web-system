@@ -1,69 +1,69 @@
-# Northstar
+# Fixera
 
-Northstar is an independent handyman and home-maintenance service in Copenhagen, Denmark.
+Fixera is an independent handyman and home-maintenance service in Copenhagen, Denmark.
 Portfolio Case Study handles the work personally for apartments, private homes, rentals and property managers.
 
 ## Official pages
 
-Homepage: https://northstar-services.example/
-About Northstar: https://northstar-services.example/about
-Services overview: https://northstar-services.example/services
-Areas covered: https://northstar-services.example/areas/
-Projects and work examples: https://northstar-services.example/projects
-Contact and quote request: https://northstar-services.example/contact
+Homepage: https://fixera.net/
+About Fixera: https://fixera.net/about
+Services overview: https://fixera.net/services
+Areas covered: https://fixera.net/areas/
+Projects and work examples: https://fixera.net/projects
+Contact and quote request: https://fixera.net/contact
 
 ## Business identity
 
-Business name: Northstar
+Business name: Fixera
 Founder and operator: Portfolio Case Study
 CVR: 43921746
 Phone and WhatsApp: +45 71 87 64 21
-Email: hello@northstar-services.example
+Email: hello@fixera.net
 Location: Copenhagen, Denmark
 Availability: Monday to Friday, 09:00–18:00
 
-## What Northstar does
+## What Fixera does
 
-Northstar provides practical handyman work, small repairs, installations, furniture assembly and property maintenance.
+Fixera provides practical handyman work, small repairs, installations, furniture assembly and property maintenance.
 The service is intended for customers who need a clear scope, a practical quote and tidy completion of the job.
 
 ## Main services
 
-General repairs and maintenance: https://northstar-services.example/services/repairs
-Home installations: https://northstar-services.example/services/installations
-Lamp installation in Copenhagen: https://northstar-services.example/services/lamp-installation-copenhagen
-TV mounting in Copenhagen: https://northstar-services.example/services/tv-mounting-copenhagen
-Shelf installation in Copenhagen: https://northstar-services.example/services/shelf-installation-copenhagen
-Furniture assembly: https://northstar-services.example/services/furniture-assembly
-IKEA furniture assembly in Copenhagen: https://northstar-services.example/services/ikea-furniture-assembly-copenhagen
-Curtain installation: https://northstar-services.example/services/curtains
-End-of-tenancy repairs: https://northstar-services.example/services/end-of-tenancy
-Painting and wall repairs: https://northstar-services.example/services/painting
-Interior woodwork: https://northstar-services.example/services/woodwork
-Skirting boards installation and repair: https://northstar-services.example/services/skirting-boards-copenhagen
-Smart home and office automations: https://northstar-services.example/services/smart-home-automations
+General repairs and maintenance: https://fixera.net/services/repairs
+Home installations: https://fixera.net/services/installations
+Lamp installation in Copenhagen: https://fixera.net/services/lamp-installation-copenhagen
+TV mounting in Copenhagen: https://fixera.net/services/tv-mounting-copenhagen
+Shelf installation in Copenhagen: https://fixera.net/services/shelf-installation-copenhagen
+Furniture assembly: https://fixera.net/services/furniture-assembly
+IKEA furniture assembly in Copenhagen: https://fixera.net/services/ikea-furniture-assembly-copenhagen
+Curtain installation: https://fixera.net/services/curtains
+End-of-tenancy repairs: https://fixera.net/services/end-of-tenancy
+Painting and wall repairs: https://fixera.net/services/painting
+Interior woodwork: https://fixera.net/services/woodwork
+Skirting boards installation and repair: https://fixera.net/services/skirting-boards-copenhagen
+Smart home and office automations: https://fixera.net/services/smart-home-automations
 
 ## Rental and property support
 
-Short-term rental maintenance: https://northstar-services.example/services/short-term-rental-maintenance-copenhagen
-Property maintenance: https://northstar-services.example/services/property-maintenance-copenhagen
-Property operations support: https://northstar-services.example/services/property-operations-support-copenhagen
+Short-term rental maintenance: https://fixera.net/services/short-term-rental-maintenance-copenhagen
+Property maintenance: https://fixera.net/services/property-maintenance-copenhagen
+Property operations support: https://fixera.net/services/property-operations-support-copenhagen
 
 ## Hospitality and office support
 
-Hospitality maintenance for hotels, restaurants and venues: https://northstar-services.example/services/hospitality-maintenance-copenhagen
-Office maintenance and practical business support: https://northstar-services.example/services/office-maintenance-copenhagen
+Hospitality maintenance for hotels, restaurants and venues: https://fixera.net/services/hospitality-maintenance-copenhagen
+Office maintenance and practical business support: https://fixera.net/services/office-maintenance-copenhagen
 
 ## Service area
 
-Northstar serves Copenhagen and nearby districts including Frederiksberg, Hellerup, Gentofte, Gladsaxe, Søborg and Charlottenlund.
-Area pages with local service information are listed at https://northstar-services.example/areas/
+Fixera serves Copenhagen and nearby districts including Frederiksberg, Hellerup, Gentofte, Gladsaxe, Søborg and Charlottenlund.
+Area pages with local service information are listed at https://fixera.net/areas/
 
 ## How to request help
 
 Customers can send a short description, photos, address or area and preferred timing through WhatsApp or the contact form.
-Photos help Northstar assess the job and reply with an estimate or the next step.
-Contact: https://northstar-services.example/contact
+Photos help Fixera assess the job and reply with an estimate or the next step.
+Contact: https://fixera.net/contact
 
 ## Business documentation
 

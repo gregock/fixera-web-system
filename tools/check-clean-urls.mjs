@@ -96,9 +96,9 @@ const srcRules = [
   },
   {
     name: 'jsonld-html-url',
-    regex: /https:\/\/northstar\.net\/[^"\s]+\.html/,
+    regex: /https:\/\/fixera\.net\/[^"\s]+\.html/,
     message: 'JSON-LD or embedded public URLs must not use .html',
-    allow: (filePath, match) => rel(filePath) === 'src/sitemap.xml' && match.startsWith('https://northstar-services.example/')
+    allow: (filePath, match) => rel(filePath) === 'src/sitemap.xml' && match.startsWith('https://fixera.net/')
   },
   {
     name: 'data-lang-en-html',
@@ -112,12 +112,12 @@ const srcRules = [
   },
   {
     name: 'invalid-domain',
-    regex: /https:\/\/northstar\.net\.da/,
+    regex: /https:\/\/fixera\.net\.da/,
     message: 'invalid domain variant detected'
   },
   {
     name: 'projects-hub-public-identity',
-    regex: /https:\/\/northstar\.net\/projects\/indexprojects(?:\.da)?(?:\.html)?/,
+    regex: /https:\/\/fixera\.net\/projects\/indexprojects(?:\.da)?(?:\.html)?/,
     message: 'projects hub public identity must be /projects or /projects.da'
   },
   {
@@ -131,22 +131,22 @@ const srcRules = [
 const publicRules = [
   {
     name: 'canonical-html',
-    regex: /<link[^>]+rel=canonical[^>]+href=https:\/\/northstar\.net\/[^\s>]+\.html[^>]*>/i,
+    regex: /<link[^>]+rel=canonical[^>]+href=https:\/\/fixera\.net\/[^\s>]+\.html[^>]*>/i,
     message: 'generated canonical must use clean public URLs'
   },
   {
     name: 'hreflang-html',
-    regex: /<link[^>]+hreflang=(?:en|da)[^>]+href=https:\/\/northstar\.net\/[^\s>]+\.html[^>]*>/i,
+    regex: /<link[^>]+hreflang=(?:en|da)[^>]+href=https:\/\/fixera\.net\/[^\s>]+\.html[^>]*>/i,
     message: 'generated hreflang must use clean public URLs'
   },
   {
     name: 'og-url-html',
-    regex: /<meta[^>]+property=og:url[^>]+content=https:\/\/northstar\.net\/[^\s>]+\.html[^>]*>/i,
+    regex: /<meta[^>]+property=og:url[^>]+content=https:\/\/fixera\.net\/[^\s>]+\.html[^>]*>/i,
     message: 'generated og:url must use clean public URLs'
   },
   {
     name: 'jsonld-html-url',
-    regex: /https:\/\/northstar\.net\/[^"\s]+\.html/,
+    regex: /https:\/\/fixera\.net\/[^"\s]+\.html/,
     message: 'generated JSON-LD or embedded public URLs must not use .html'
   },
   {
@@ -161,12 +161,12 @@ const publicRules = [
   },
   {
     name: 'invalid-domain',
-    regex: /https:\/\/northstar\.net\.da/,
+    regex: /https:\/\/fixera\.net\.da/,
     message: 'invalid generated domain variant detected'
   },
   {
     name: 'projects-hub-public-identity',
-    regex: /https:\/\/northstar\.net\/projects\/indexprojects(?:\.da)?(?:\.html)?/,
+    regex: /https:\/\/fixera\.net\/projects\/indexprojects(?:\.da)?(?:\.html)?/,
     message: 'generated projects hub public identity must be /projects or /projects.da'
   },
   {
@@ -200,7 +200,7 @@ const jsRules = [
   },
   {
     name: 'runtime-absolute-html',
-    regex: /https:\/\/northstar\.net\/[^"'\s]+\.html/,
+    regex: /https:\/\/fixera\.net\/[^"'\s]+\.html/,
     message: 'runtime must not use .html public URLs'
   }
 ];

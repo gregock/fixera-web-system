@@ -4,7 +4,7 @@ Last synchronized: 2026-05-22
 
 ## Website Structure
 
-The Northstar site is a static bilingual SEO cluster with these page groups:
+The Fixera site is a static bilingual SEO cluster with these page groups:
 
 - homepage
 - services hub
@@ -43,7 +43,7 @@ Current strengthening already implemented:
   - `areas/handyman-gladsaxe.html`
   - `areas/handyman-hellerup.html`
 - contextual support for the remaining legacy blog support pages:
-  - `blog/handyhand-vs-northstar.html`
+  - `blog/handyhand-vs-fixera.html`
   - `blog/how-much-does-a-handyman-cost-in-copenhagen.html`
 - preferred discovery / proof surfaces:
   - `projects/ikea-furniture-assembly-copenhagen.html`

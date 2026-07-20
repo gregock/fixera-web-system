@@ -481,9 +481,9 @@ strong {
 }
 
 .floating-cta:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 3px;
-  box-shadow: 0 0 0 4px var(--northstar-ring), 0 16px 36px rgba(15, 23, 42, 0.24);
+  box-shadow: 0 0 0 4px var(--fixera-ring), 0 16px 36px rgba(15, 23, 42, 0.24);
 }
 
 .floating-cta__icon {
@@ -570,9 +570,9 @@ strong {
 }
 
 .back-to-top-chip:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 3px;
-  box-shadow: 0 0 0 4px var(--northstar-ring), 0 8px 22px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 0 0 4px var(--fixera-ring), 0 8px 22px rgba(15, 23, 42, 0.12);
 }
 
 @media (max-width: 767px) {
@@ -660,7 +660,7 @@ strong {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.35;
-  color: var(--northstar-blue);
+  color: var(--fixera-blue);
   transition:
     color var(--motion-fast) var(--ease-standard),
     opacity var(--motion-fast) var(--ease-standard),
@@ -672,7 +672,7 @@ strong {
   text-decoration: underline;
 }
 .cta-micro:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 2px;
   border-radius: 0.375rem;
   text-decoration: underline;
@@ -720,7 +720,7 @@ strong {
   transition-duration: var(--motion-fast);
 }
 .nav-link:hover {
-  color: var(--northstar-blue);
+  color: var(--fixera-blue);
   background-color: rgba(0, 0, 0, 0.03);
 }
 .nav-link-active {
@@ -755,7 +755,7 @@ strong {
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width))
     var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-  --tw-ring-color: var(--northstar-blue);
+  --tw-ring-color: var(--fixera-blue);
 }
 a.card:hover,
 button.card:hover,
@@ -898,7 +898,7 @@ button.card:hover,
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width))
     var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-  --tw-ring-color: var(--northstar-blue);
+  --tw-ring-color: var(--fixera-blue);
   --tw-ring-offset-width: 1px;
 }
 .drawer-nav {
@@ -1064,7 +1064,7 @@ button.card:hover,
   display: none;
 }
 .nav-cta:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 2px;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1229,7 +1229,7 @@ button.card:active,
   outline-offset: 2px;
 }
 .btn-primary {
-  background: var(--northstar-blue);
+  background: var(--fixera-blue);
 }
 .btn-primary:hover {
   background: #1d3149;
@@ -1747,8 +1747,8 @@ button.card:active,
   --tw-border-opacity: 1;
   border-color: rgb(250 204 21 / var(--tw-border-opacity, 1));
 }
-.bg-\[var\(--northstar-blue\)\] {
-  background-color: var(--northstar-blue);
+.bg-\[var\(--fixera-blue\)\] {
+  background-color: var(--fixera-blue);
 }
 .bg-black {
   --tw-bg-opacity: 1;
@@ -2023,8 +2023,8 @@ button.card:active,
 .tracking-wide {
   letter-spacing: 0.025em;
 }
-.text-\[var\(--northstar-blue\)\] {
-  color: var(--northstar-blue);
+.text-\[var\(--fixera-blue\)\] {
+  color: var(--fixera-blue);
 }
 .text-gray-300 {
   --tw-text-opacity: 1;
@@ -2254,7 +2254,7 @@ button.card:active,
     border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
     --tw-bg-opacity: 1;
     background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
-    color: var(--northstar-blue);
+    color: var(--fixera-blue);
   }
   footer {
     padding-top: 16px;
@@ -2273,15 +2273,15 @@ button.card:active,
   }
 }
 :root {
-  --northstar-blue: #233a54;
-  --northstar-ring: rgba(35, 58, 84, 0.35);
+  --fixera-blue: #233a54;
+  --fixera-ring: rgba(35, 58, 84, 0.35);
   --motion-fast: 0.14s;
   --motion-ui: 0.18s;
   --motion-surface: 0.22s;
   --ease-standard: cubic-bezier(0, 0, 0.2, 1);
 }
 footer a:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 2px;
 }
 .footer-logo {
@@ -2339,7 +2339,7 @@ details.faq summary:focus-visible {
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width))
     var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-  --tw-ring-color: var(--northstar-blue);
+  --tw-ring-color: var(--fixera-blue);
   --tw-ring-offset-width: 1px;
 }
 details.faq summary::-webkit-details-marker {
@@ -2418,10 +2418,10 @@ details.faq[open] .faq-chevron {
 .btn-dark:focus-visible,
 .btn-outline:focus-visible,
 .btn-primary:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 2px;
   border-radius: 9999px;
-  box-shadow: 0 0 0 3px var(--northstar-ring);
+  box-shadow: 0 0 0 3px var(--fixera-ring);
 }
 
 #services-list .grid > .card,
@@ -2561,42 +2561,42 @@ dialog#glight:modal {
 #ba-grid img:focus-visible,
 #fr-grid img:focus-visible,
 #hp-grid img:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 2px;
 }
 :focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 3px;
 }
 [role="button"]:focus-visible,
 a:focus-visible,
 button:focus-visible {
-  box-shadow: 0 0 0 3px var(--northstar-ring);
+  box-shadow: 0 0 0 3px var(--fixera-ring);
   border-radius: 0.5rem;
 }
 .nav-link:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 2px;
-  box-shadow: 0 0 0 3px var(--northstar-ring);
+  box-shadow: 0 0 0 3px var(--fixera-ring);
   border-radius: 0.5rem;
   background-color: rgba(0, 0, 0, 0.03);
 }
 .menu-btn:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 2px;
-  box-shadow: 0 0 0 3px var(--northstar-ring);
+  box-shadow: 0 0 0 3px var(--fixera-ring);
 }
 .mobile-panel a:focus-visible,
 .mobile-panel button:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 2px;
-  box-shadow: 0 0 0 3px var(--northstar-ring);
+  box-shadow: 0 0 0 3px var(--fixera-ring);
   border-radius: 0.5rem;
 }
 .focus-ring:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 2px;
-  box-shadow: 0 0 0 3px var(--northstar-ring);
+  box-shadow: 0 0 0 3px var(--fixera-ring);
   border-radius: 0.5rem;
 }
 @media (prefers-contrast: more) {
@@ -2866,8 +2866,8 @@ html {
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width))
     var(--tw-ring-color);
 }
-.focus\:ring-\[var\(--northstar-blue\)\]:focus {
-  --tw-ring-color: var(--northstar-blue);
+.focus\:ring-\[var\(--fixera-blue\)\]:focus {
+  --tw-ring-color: var(--fixera-blue);
 }
 .focus\:ring-blue-600:focus {
   --tw-ring-opacity: 1;
@@ -2891,8 +2891,8 @@ html {
     var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-.focus-visible\:ring-\[var\(--northstar-blue\)\]:focus-visible {
-  --tw-ring-color: var(--northstar-blue);
+.focus-visible\:ring-\[var\(--fixera-blue\)\]:focus-visible {
+  --tw-ring-color: var(--fixera-blue);
 }
 .focus-visible\:ring-gray-400:focus-visible {
   --tw-ring-opacity: 1;
@@ -3199,7 +3199,7 @@ h3.text-lg {
   line-height: 1.45;
 }
 
-/* === Northstar: Project tag chips (used in Projects list and detail) === */
+/* === Fixera: Project tag chips (used in Projects list and detail) === */
 .chip,
 a.chip {
   display: inline-flex;
@@ -3219,7 +3219,7 @@ a.chip {
 .chip:hover,
 a.chip:hover {
   border-color: #cbd5e1;      /* slate-300 */
-  color: var(--northstar-blue);
+  color: var(--fixera-blue);
   background: #ffffff;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
   transform: translateY(-1px);
@@ -3231,9 +3231,9 @@ a.chip:active {
 }
 .chip:focus-visible,
 a.chip:focus-visible {
-  outline: 2px solid var(--northstar-blue);
+  outline: 2px solid var(--fixera-blue);
   outline-offset: 2px;
-  box-shadow: 0 0 0 3px var(--northstar-ring);
+  box-shadow: 0 0 0 3px var(--fixera-ring);
 }
 .chip[aria-current="true"],
 .chip[aria-selected="true"],

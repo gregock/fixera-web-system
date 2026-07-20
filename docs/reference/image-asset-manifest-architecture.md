@@ -80,7 +80,7 @@ Example:
 
 ```json
 {
-  "schema": "northstar-image-manifest@1",
+  "schema": "fixera-image-manifest@1",
   "scope": "projects",
   "slug": "example-project",
   "entries": [

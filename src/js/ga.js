@@ -1,13 +1,13 @@
 // @ts-nocheck
 (function (win, doc) {
-  var INTERNAL_STORAGE_KEY = "northstar_internal_traffic";
+  var INTERNAL_STORAGE_KEY = "fixera_internal_traffic";
   var params = new URLSearchParams(win.location.search);
 
   if (params.get("internal") === "true") {
     try {
       win.localStorage.setItem(INTERNAL_STORAGE_KEY, "1");
     } catch (e) {}
-    win.__northstarInternalTraffic = true;
+    win.__fixeraInternalTraffic = true;
   }
 
   if (params.get("internal") === "false") {
@@ -26,7 +26,7 @@
   } catch (e) {}
 
   if (isInternal) {
-    win.__northstarInternalTraffic = true;
+    win.__fixeraInternalTraffic = true;
     if (
       win.location.hostname === "localhost" ||
       win.location.hostname === "127.0.0.1" ||
@@ -37,8 +37,8 @@
         win.dataLayer.push(arguments);
       };
       win.gtag = gtagStub;
-      win.northstarWindow = win.northstarWindow || {};
-      win.northstarWindow.gtag = gtagStub;
+      win.fixeraWindow = win.fixeraWindow || {};
+      win.fixeraWindow.gtag = gtagStub;
     }
     return;
   }

@@ -8,12 +8,12 @@ import { getLeadContext } from "./lead-tracking.js";
  *   sendPixel?: (name: string, params?: Record<string, any>) => void;
  * }} ServiceSiteWindow
  */
-const northstarWindow = /** @type {ServiceSiteWindow} */ (window);
+const fixeraWindow = /** @type {ServiceSiteWindow} */ (window);
 const LEAD_API_URL = "https://example-crm.invalid/api/leads";
 
 function getSessionTestFlag() {
   try {
-    return sessionStorage.getItem("northstar_test") === "true";
+    return sessionStorage.getItem("fixera_test") === "true";
   } catch {
     return false;
   }
@@ -22,10 +22,10 @@ function getSessionTestFlag() {
 function persistTestTrafficFromUrl() {
   try {
     const params = new URLSearchParams(window.location.search);
-    const value = (params.get("northstar_test") || "").trim().toLowerCase();
+    const value = (params.get("fixera_test") || "").trim().toLowerCase();
 
     if (value === "1" || value === "true" || value === "yes") {
-      sessionStorage.setItem("northstar_test", "true");
+      sessionStorage.setItem("fixera_test", "true");
       return true;
     }
 
@@ -59,7 +59,7 @@ export function initContact() {
         successTitle: "Besked modtaget",
         successBody: "Jeg har modtaget din besked og vender tilbage hurtigst muligt, normalt inden for få timer.",
         successNote: "Hvis det haster, er WhatsApp den hurtigste måde at få fat i mig på.",
-        failure: "Noget gik galt. Prøv igen eller skriv til hello@northstar-services.example.",
+        failure: "Noget gik galt. Prøv igen eller skriv til hello@fixera.net.",
         network: "Netværksfejl. Prøv igen om et øjeblik.",
         sent: "Sendt",
       }
@@ -68,7 +68,7 @@ export function initContact() {
         successTitle: "Request received",
         successBody: "I’ve got your message and will reply shortly, usually within a few hours.",
         successNote: "If it’s urgent, WhatsApp is the fastest way to reach me.",
-        failure: "Something went wrong. Please try again or email hello@northstar-services.example.",
+        failure: "Something went wrong. Please try again or email hello@fixera.net.",
         network: "Network error. Please try again in a moment.",
         sent: "Sent",
       };
@@ -117,8 +117,8 @@ export function initContact() {
     if (formViewed) return;
     formViewed = true;
     try {
-      if (typeof northstarWindow.sendGA4 === "function") {
-        northstarWindow.sendGA4("contact_form_view", {
+      if (typeof fixeraWindow.sendGA4 === "function") {
+        fixeraWindow.sendGA4("contact_form_view", {
           form_id: form.id || "contact-form",
           cta_position: "contact_form",
           form_source: "contact_page",
@@ -316,8 +316,8 @@ export function initContact() {
       if (formStarted) return;
       formStarted = true;
       try {
-      if (typeof northstarWindow.sendGA4 === "function") {
-        northstarWindow.sendGA4("contact_form_start", {
+      if (typeof fixeraWindow.sendGA4 === "function") {
+        fixeraWindow.sendGA4("contact_form_start", {
           form_id: form.id || "contact-form",
           cta_position: "contact_form",
           form_source: "contact_page",
@@ -339,8 +339,8 @@ export function initContact() {
     status && (status.textContent = "");
     const ok = validate();
     try {
-      if (typeof northstarWindow.sendGA4 === "function") {
-        northstarWindow.sendGA4("contact_form_submit_attempt", {
+      if (typeof fixeraWindow.sendGA4 === "function") {
+        fixeraWindow.sendGA4("contact_form_submit_attempt", {
           form_id: form.id || "contact-form",
           cta_position: "contact_form",
           form_source: "contact_page",
@@ -363,8 +363,8 @@ export function initContact() {
       invalidFields.forEach(([fieldName, fieldOk]) => {
         if (fieldOk) return;
         try {
-          if (typeof northstarWindow.sendGA4 === "function") {
-            northstarWindow.sendGA4("contact_form_field_error", {
+          if (typeof fixeraWindow.sendGA4 === "function") {
+            fixeraWindow.sendGA4("contact_form_field_error", {
               form_id: form.id || "contact-form",
               cta_position: "contact_form",
               form_source: "contact_page",
@@ -410,8 +410,8 @@ export function initContact() {
           true
         );
         try {
-          if (typeof northstarWindow.sendGA4 === "function")
-            northstarWindow.sendGA4(
+          if (typeof fixeraWindow.sendGA4 === "function")
+            fixeraWindow.sendGA4(
               "contact_form_submit",
               {
                 form_id: form.id || "contact-form",
@@ -422,8 +422,8 @@ export function initContact() {
             );
         } catch (_) {}
         try {
-          if (typeof northstarWindow.sendGA4 === "function")
-            northstarWindow.sendGA4("contact_form_submit_success", {
+          if (typeof fixeraWindow.sendGA4 === "function")
+            fixeraWindow.sendGA4("contact_form_submit_success", {
               form_id: form.id || "contact-form",
               cta_position: "contact_form",
               form_source: "contact_page",
@@ -431,8 +431,8 @@ export function initContact() {
             });
         } catch (_) {}
         try {
-          if (typeof northstarWindow.sendPixel === "function") {
-            northstarWindow.sendPixel("Lead", { method: "Form" });
+          if (typeof fixeraWindow.sendPixel === "function") {
+            fixeraWindow.sendPixel("Lead", { method: "Form" });
           }
         } catch (_) {}
         // Deshabilitar botón tras envío exitoso
@@ -455,8 +455,8 @@ export function initContact() {
       } else {
         setStatus(messages.failure, false);
         try {
-          if (typeof northstarWindow.sendGA4 === "function")
-            northstarWindow.sendGA4("contact_form_submit_failure", {
+          if (typeof fixeraWindow.sendGA4 === "function")
+            fixeraWindow.sendGA4("contact_form_submit_failure", {
               form_id: form.id || "contact-form",
               cta_position: "contact_form",
               form_source: "contact_page",
@@ -468,8 +468,8 @@ export function initContact() {
       console.error("[Contact] submit error", err);
       setStatus(messages.network, false);
       try {
-        if (typeof northstarWindow.sendGA4 === "function")
-          northstarWindow.sendGA4("contact_form_submit_failure", {
+        if (typeof fixeraWindow.sendGA4 === "function")
+          fixeraWindow.sendGA4("contact_form_submit_failure", {
             form_id: form.id || "contact-form",
             cta_position: "contact_form",
             form_source: "contact_page",

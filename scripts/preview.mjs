@@ -43,6 +43,9 @@ function resolveFile(requestPath) {
     candidates.push(path.join(directPath, "index.html"));
   } else {
     candidates.push(`${directPath}.html`);
+    if (relativePath.endsWith(".da")) {
+      candidates.push(path.join(root, relativePath.slice(0, -3), "index.da.html"));
+    }
     candidates.push(path.join(directPath, "index.html"));
   }
 

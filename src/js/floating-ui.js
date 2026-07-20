@@ -5,7 +5,7 @@
  *   sendGA4?: (name: string, params?: Record<string, any>, sourceEl?: Element | null) => void;
  * }} ServiceSiteWindow
  */
-const northstarWindow = /** @type {ServiceSiteWindow} */ (window);
+const fixeraWindow = /** @type {ServiceSiteWindow} */ (window);
 const FLOATING_CTA_SHOW_Y = 320;
 const FLOATING_CTA_HIDE_Y = 160;
 const BACK_TO_TOP_SHOW_Y = 320;
@@ -41,8 +41,8 @@ export function initBackToTop() {
     if (!trackedShown) {
       trackedShown = true;
       try {
-        if (typeof northstarWindow.sendGA4 === "function") {
-          northstarWindow.sendGA4("back_to_top_shown", { link_text: (btn.textContent || "").trim() });
+        if (typeof fixeraWindow.sendGA4 === "function") {
+          fixeraWindow.sendGA4("back_to_top_shown", { link_text: (btn.textContent || "").trim() });
         }
       } catch (_) {}
     }
@@ -105,8 +105,8 @@ export function initBackToTop() {
   btn.addEventListener("click", (event) => {
     event.preventDefault();
     try {
-      if (typeof northstarWindow.sendGA4 === "function") {
-        northstarWindow.sendGA4("back_to_top_click", {
+      if (typeof fixeraWindow.sendGA4 === "function") {
+        fixeraWindow.sendGA4("back_to_top_click", {
           link_text: (btn.textContent || "").trim(),
         });
       }
@@ -180,8 +180,8 @@ export function initHomepageFloatingWhatsAppCTA() {
       if (!trackedShown) {
         trackedShown = true;
         try {
-          if (typeof northstarWindow.sendGA4 === "function") {
-            northstarWindow.sendGA4(
+          if (typeof fixeraWindow.sendGA4 === "function") {
+            fixeraWindow.sendGA4(
               "floating_cta_shown",
               {
                 link_url: cta.getAttribute("href") || cta.href || "",

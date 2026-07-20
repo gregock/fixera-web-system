@@ -12,12 +12,12 @@ import { initImageHygiene } from "./image-hygiene.js";
  *   sendPixel?: (name: string, params?: Record<string, any>) => void;
  *   gtag?: (...args: any[]) => void;
  *   fbq?: (...args: any[]) => void;
- *   __northstarFormTrackBound?: boolean;
- *   __northstarFormSubmitted?: boolean;
- *   __northstarLeadTrackBound?: boolean;
+ *   __fixeraFormTrackBound?: boolean;
+ *   __fixeraFormSubmitted?: boolean;
+ *   __fixeraLeadTrackBound?: boolean;
  * }} ServiceSiteWindow
  */
-const northstarWindow = /** @type {ServiceSiteWindow} */ (window);
+const fixeraWindow = /** @type {ServiceSiteWindow} */ (window);
 
 // ===== Utilities =====
 /**
@@ -82,7 +82,7 @@ function initYear() {
 }
 
 function initFooterLogoSizing() {
-  const logos = Array.from(document.querySelectorAll('footer img[src*="northstar-logo-reg.svg"]'));
+  const logos = Array.from(document.querySelectorAll('footer img[src*="fixera-logo-reg.svg"]'));
   if (!logos.length) return;
 
   const applySize = () => {
@@ -308,7 +308,7 @@ async function initGallery() {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className =
-        "group block rounded-xl overflow-hidden relative focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--northstar-blue)]";
+        "group block rounded-xl overflow-hidden relative focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fixera-blue)]";
 
       const picture = document.createElement("picture");
 
@@ -651,7 +651,7 @@ async function initProjects() {
           const link = document.createElement("a");
           link.href = `/projects/${project.slug}${hrefSuffix}`;
           link.className =
-            "block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--northstar-blue)]";
+            "block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--fixera-blue)]";
 
           const figure = document.createElement("figure");
           figure.className = "aspect-[16/9] overflow-hidden rounded-t-2xl";
@@ -706,7 +706,7 @@ async function initProjects() {
           const microLink = document.createElement("a");
           microLink.href = currentLang === "da" ? "/contact.da" : "/contact";
           microLink.className =
-            "inline-flex items-center gap-1 text-sm font-semibold text-[var(--northstar-blue)] hover:opacity-80";
+            "inline-flex items-center gap-1 text-sm font-semibold text-[var(--fixera-blue)] hover:opacity-80";
           microLink.setAttribute("data-gtag-lead", "contact_inline_projects");
           microLink.textContent =
             currentLang === "da"
@@ -739,7 +739,7 @@ async function initProjects() {
           const cta = document.createElement("a");
           cta.href = `/projects/${project.slug}${hrefSuffix}`;
           cta.className =
-            "card-cta inline-flex items-center gap-1 text-sm font-medium text-[var(--northstar-blue)] mt-4";
+            "card-cta inline-flex items-center gap-1 text-sm font-medium text-[var(--fixera-blue)] mt-4";
           cta.textContent = currentLang === "da" ? "Se projekt" : "View project";
 
           const arrow = document.createElement("span");
@@ -874,7 +874,7 @@ async function initProjects() {
         headline: project.title || "",
         datePublished: project.date || "",
         author: { "@type": "Person", name: "Portfolio Case Study" },
-        publisher: { "@type": "Organization", name: "Northstar" },
+        publisher: { "@type": "Organization", name: "Fixera" },
         image: /** @type {Array<{ src?: string; w?: number; h?: number }>} */ (
           (project.images || []).slice(0, 6)
         ).map((im) => ({
@@ -974,8 +974,8 @@ initAnalytics();
       var el = _t && _t.closest ? _t.closest('#cta-gallery, [data-cta="gallery"]') : null;
       if (!el) return;
       try {
-        if (typeof northstarWindow.sendGA4 === "function") {
-          northstarWindow.sendGA4(
+        if (typeof fixeraWindow.sendGA4 === "function") {
+          fixeraWindow.sendGA4(
             "gallery_cta_click",
             {
               element_id: el.id || "data-cta:gallery",
@@ -1052,14 +1052,14 @@ initAnalytics();
       el.href = href;
       el.setAttribute("hreflang", lang);
       el.className =
-        "inline-flex min-h-11 min-w-11 items-center justify-center rounded px-2 py-2 text-sm font-medium text-[var(--northstar-blue)] hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--northstar-blue)]";
+        "inline-flex min-h-11 min-w-11 items-center justify-center rounded px-2 py-2 text-sm font-medium text-[var(--fixera-blue)] hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--fixera-blue)]";
     }
     el.textContent = label;
     el.setAttribute("lang", lang);
 
     if (isCurrent) {
       el.setAttribute("aria-current", "true");
-      el.classList.remove("text-[var(--northstar-blue)]");
+      el.classList.remove("text-[var(--fixera-blue)]");
       el.classList.add("text-gray-500");
       if (el.tagName === "A") {
         el.style.pointerEvents = "none";
@@ -1278,8 +1278,8 @@ function initNavDrawer() {
     toggleEl.classList.add("open");
     setBackgroundDisabled(true);
     try {
-      if (northstarWindow.sendGA4)
-        northstarWindow.sendGA4(
+      if (fixeraWindow.sendGA4)
+        fixeraWindow.sendGA4(
           "nav_open",
           { placement: "hamburger", cta_position: "nav" }
         );
@@ -1311,8 +1311,8 @@ function initNavDrawer() {
     root.style.overflow = previousOverflow;
     document.removeEventListener("keydown", trapFocus, true);
     try {
-      if (northstarWindow.sendGA4)
-        northstarWindow.sendGA4(
+      if (fixeraWindow.sendGA4)
+        fixeraWindow.sendGA4(
           "nav_close",
           { placement: "hamburger", cta_position: "nav" }
         );

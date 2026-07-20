@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --northstar-blue: #233a54;
-  --northstar-ring: rgba(35, 58, 84, 0.35);
+  --fixera-blue: #233a54;
+  --fixera-ring: rgba(35, 58, 84, 0.35);
   --motion-fast: 0.14s;
   --motion-ui: 0.18s;
   --motion-surface: 0.22s;
@@ -90,19 +90,19 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--northstar-blue);
+    outline: 2px solid var(--fixera-blue);
     outline-offset: 3px;
   }
 
   a:focus-visible,
   button:focus-visible,
   [role="button"]:focus-visible {
-    box-shadow: 0 0 0 3px var(--northstar-ring);
+    box-shadow: 0 0 0 3px var(--fixera-ring);
     border-radius: 0.5rem;
   }
 
   footer a:focus-visible {
-    outline: 2px solid var(--northstar-blue);
+    outline: 2px solid var(--fixera-blue);
     outline-offset: 2px;
   }
 }
@@ -130,9 +130,9 @@
   }
 
   .focus-ring:focus-visible {
-    outline: 2px solid var(--northstar-blue);
+    outline: 2px solid var(--fixera-blue);
     outline-offset: 2px;
-    box-shadow: 0 0 0 3px var(--northstar-ring);
+    box-shadow: 0 0 0 3px var(--fixera-ring);
     border-radius: 0.5rem;
   }
 
@@ -273,7 +273,7 @@
     padding: 0.75rem 1.5rem;
     font-weight: 600;
     color: rgb(255 255 255 / 1);
-    background: var(--northstar-blue);
+    background: var(--fixera-blue);
     text-decoration: none;
     box-shadow: 0 8px 18px -10px rgba(35, 58, 84, 0.55), 0 2px 4px rgba(15, 23, 42, 0.12);
     transition-property:
@@ -297,10 +297,10 @@
   .btn-dark:focus-visible,
   .btn-outline:focus-visible,
   .btn-primary:focus-visible {
-    outline: 2px solid var(--northstar-blue);
+    outline: 2px solid var(--fixera-blue);
     outline-offset: 2px;
     border-radius: 9999px;
-    box-shadow: 0 0 0 3px var(--northstar-ring);
+    box-shadow: 0 0 0 3px var(--fixera-ring);
   }
 
   .btn-dark:disabled,
@@ -328,7 +328,7 @@
   }
 
   .nav-link:hover {
-    color: var(--northstar-blue);
+    color: var(--fixera-blue);
     background-color: rgba(0, 0, 0, 0.03);
     transform: translateY(-1px);
   }
@@ -338,9 +338,9 @@
   }
 
   .nav-link:focus-visible {
-    outline: 2px solid var(--northstar-blue);
+    outline: 2px solid var(--fixera-blue);
     outline-offset: 2px;
-    box-shadow: 0 0 0 3px var(--northstar-ring);
+    box-shadow: 0 0 0 3px var(--fixera-ring);
     border-radius: 0.5rem;
     background-color: rgba(0, 0, 0, 0.03);
   }
@@ -366,7 +366,7 @@
   }
 
   .card:focus-within {
-    box-shadow: 0 0 0 2px var(--northstar-blue), 0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 1px 3px 0 rgba(15, 23, 42, 0.06);
+    box-shadow: 0 0 0 2px var(--fixera-blue), 0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 1px 3px 0 rgba(15, 23, 42, 0.06);
   }
 
   a.card:hover,
@@ -470,9 +470,9 @@
   }
 
   .menu-btn:focus-visible {
-    outline: 2px solid var(--northstar-blue);
+    outline: 2px solid var(--fixera-blue);
     outline-offset: 2px;
-    box-shadow: 0 0 0 3px var(--northstar-ring);
+    box-shadow: 0 0 0 3px var(--fixera-ring);
   }
 
   .menu-btn.open .line1 {
@@ -553,7 +553,7 @@
   }
 
   .drawer-close:focus-visible {
-    box-shadow: 0 0 0 2px var(--northstar-blue);
+    box-shadow: 0 0 0 2px var(--fixera-blue);
   }
 
   .drawer-nav {
@@ -646,7 +646,7 @@
   }
 
   .nav-cta:focus-visible {
-    outline: 2px solid var(--northstar-blue);
+    outline: 2px solid var(--fixera-blue);
     outline-offset: 2px;
   }
 
@@ -710,7 +710,7 @@
     max-width: 160px;
   }
 
-  .footer-base a > img[src*="northstar-logo-reg.svg"] {
+  .footer-base a > img[src*="fixera-logo-reg.svg"] {
     display: block !important;
     width: 148px !important;
     height: auto !important;
@@ -745,7 +745,7 @@
       max-width: 220px;
     }
 
-    .footer-base a > img[src*="northstar-logo-reg.svg"] {
+    .footer-base a > img[src*="fixera-logo-reg.svg"] {
       width: 200px !important;
     }
   }
@@ -766,7 +766,7 @@
       max-width: 260px;
     }
 
-    .footer-base a > img[src*="northstar-logo-reg.svg"] {
+    .footer-base a > img[src*="fixera-logo-reg.svg"] {
       width: 232px !important;
     }
   }
@@ -834,9 +834,9 @@
   }
 
   .floating-cta:focus-visible {
-    outline: 2px solid var(--northstar-blue);
+    outline: 2px solid var(--fixera-blue);
     outline-offset: 3px;
-    box-shadow: 0 0 0 4px var(--northstar-ring), 0 16px 36px rgba(15, 23, 42, 0.24);
+    box-shadow: 0 0 0 4px var(--fixera-ring), 0 16px 36px rgba(15, 23, 42, 0.24);
   }
 
   .floating-cta__icon {
@@ -923,9 +923,9 @@
   }
 
   .back-to-top-chip:focus-visible {
-    outline: 2px solid var(--northstar-blue);
+    outline: 2px solid var(--fixera-blue);
     outline-offset: 3px;
-    box-shadow: 0 0 0 4px var(--northstar-ring), 0 8px 22px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 0 0 4px var(--fixera-ring), 0 8px 22px rgba(15, 23, 42, 0.12);
   }
 
   .cta-micro {
@@ -935,7 +935,7 @@
     font-size: 0.875rem;
     font-weight: 600;
     line-height: 1.35;
-    color: var(--northstar-blue);
+    color: var(--fixera-blue);
     transition:
       color var(--motion-fast) var(--ease-standard),
       opacity var(--motion-fast) var(--ease-standard),
@@ -949,7 +949,7 @@
   }
 
   .cta-micro:focus-visible {
-    outline: 2px solid var(--northstar-blue);
+    outline: 2px solid var(--fixera-blue);
     outline-offset: 2px;
     border-radius: 0.375rem;
     text-decoration: underline;
@@ -987,7 +987,7 @@
   }
 
   details.faq summary:focus-visible {
-    box-shadow: 0 0 0 2px var(--northstar-blue);
+    box-shadow: 0 0 0 2px var(--fixera-blue);
   }
 
   details.faq summary::-webkit-details-marker {

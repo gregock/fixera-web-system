@@ -5,7 +5,7 @@ import { execSync } from 'child_process';
 const projectRoot = process.cwd();
 const srcDir = path.join(projectRoot, 'src');
 const sitemapPath = path.join(projectRoot, 'public', 'sitemap.xml');
-const baseUrl = 'https://northstar-services.example';
+const baseUrl = 'https://fixera.net';
 const legacyAliasFiles = new Set([
   'projects/indexprojects.html',
   'projects/indexprojects.da.html',

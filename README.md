@@ -1,12 +1,28 @@
 # Fixera Web System
 
-Public-safe portfolio edition of the Fixera bilingual service-business website system.
+Public-safe portfolio edition of the Fixera bilingual website system: a static service-business web surface with clean URLs, EN/DA parity, sitemap and hreflang automation, SEO validation, and explicit public/private boundaries.
 
-This repository demonstrates how a static marketing site can be maintained as an operational web system: clean URLs, bilingual page parity, sitemap generation, runtime SEO validation, structured service/project content, and guarded tracking boundaries.
+This repository demonstrates how a marketing website can be maintained as an operational engineering system rather than a loose collection of pages.
 
-Fixera is a real public-facing service business, and the production implementation can be reviewed at https://fixera.net. This repository is intentionally semi-anonymized: it keeps the public brand context where useful for verification, while removing private operations, customer data, analytics exports, lead records, generated reports, deployment state, secrets, and internal execution backlogs.
+## Production Reference
+
+Fixera is a real public-facing service business, and the production implementation can be reviewed at https://fixera.net.
+
+This repository is intentionally semi-anonymized: it keeps the public brand context where useful for verification, while removing private operations, customer data, analytics exports, lead records, generated reports, deployment state, secrets, internal execution backlogs, and private third-party account configuration.
 
 All visual media in this public edition is placeholder media. File names and paths are preserved to demonstrate the asset pipeline and page structure without publishing real customer, property, or job photos.
+
+Contact forms, lead capture endpoints, phone numbers, and private third-party form identifiers are intentionally disabled or sanitized in this edition.
+
+## Key Engineering Highlights
+
+- Treats a static website as a validated build artifact.
+- Preserves clean public URLs across English and Danish page variants.
+- Generates and validates sitemap coverage.
+- Injects and validates hreflang relationships.
+- Separates public website code from private operational data.
+- Keeps production-like structure while replacing sensitive media and runtime configuration.
+- Provides a reproducible local verification gate before publication.
 
 ## What This Demonstrates
 
@@ -55,9 +71,8 @@ See [docs/public-boundary.md](docs/public-boundary.md).
 ## Validation
 
 ```bash
-npm install
-npm run build
-npm run validate
+npm ci
+npm run verify
 ```
 
 Runtime validation can be run after serving the built output:

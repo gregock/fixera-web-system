@@ -1,7 +1,7 @@
 {
-  "name": "service-business-web-system",
+  "name": "fixera-web-system",
   "version": "1.0.0",
-  "description": "Public-safe portfolio edition of a bilingual service-business website system.",
+  "description": "Public-safe portfolio edition of the Fixera bilingual website system.",
   "type": "module",
   "main": "tailwind.config.js",
   "scripts": {
@@ -87,7 +87,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gregock/service-business-web-system.git"
+    "url": "git+https://github.com/gregock/fixera-web-system.git"
   },
   "keywords": [
     "portfolio",
@@ -100,9 +100,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gregock/service-business-web-system/issues"
+    "url": "https://github.com/gregock/fixera-web-system/issues"
   },
-  "homepage": "https://github.com/gregock/service-business-web-system#readme",
+  "homepage": "https://github.com/gregock/fixera-web-system#readme",
   "engines": {
     "node": "22.x"
   },

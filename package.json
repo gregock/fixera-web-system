@@ -6,8 +6,8 @@
   "main": "tailwind.config.js",
   "scripts": {
     "clean": "rimraf public && mkdir -p public/css public/js public/images public/icons public/favicon public/fonts",
-    "dev:css": "tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./public/css/style.css --watch",
-    "build:css": "tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./public/css/style.css --minify",
+    "dev:css": "BROWSERSLIST_IGNORE_OLD_DATA=1 tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./public/css/style.css --watch",
+    "build:css": "BROWSERSLIST_IGNORE_OLD_DATA=1 tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./public/css/style.css --minify",
     "dev:js": "esbuild ./src/js/scripts.js --bundle --outfile=./public/js/scripts.js --watch",
     "build:js": "esbuild ./src/js/scripts.js --bundle --minify --outfile=./public/js/scripts.js",
     "dev:html": "npm run build:html && chokidar \"src/**/*.html\" -c \"npm run build:html\" --debounce 200",
@@ -25,6 +25,9 @@
     "validate": "node tools/validate.mjs",
     "validate:runtime": "node tools/validate-runtime-seo.mjs",
     "validate:images": "node tools/validate-image-manifests.mjs",
+    "validate:i18n": "node tools/validate-i18n-structure.mjs",
+    "validate:clean-urls": "node tools/check-clean-urls.mjs",
+    "validate:public-safety": "node scripts/validate-public-safety.mjs",
     "generate:page-manifest": "node tools/generate-page-manifest.mjs",
     "preview": "node scripts/preview.mjs",
     "build:dev": "npm-run-all build:assets build:css build:js build:html",
@@ -37,8 +40,8 @@
     "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
     "format": "prettier --write .",
     "prepare": "if [ \"$VERCEL\" != \"1\" ]; then husky; fi",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "check:no-em-dash": "node scripts/check-no-em-dash.mjs"
+    "check:no-em-dash": "node scripts/check-no-em-dash.mjs",
+    "check": "npm run test && npm run lint && npm run lint:css && npm run build && npm run validate && npm run validate:clean-urls && npm run validate:i18n && npm run validate:images && npm run validate:public-safety"
   },
   "devDependencies": {
     "@eslint/js": "9.37.0",

@@ -1,20 +1,23 @@
 // @ts-nocheck
-(function (f, b, e, v, n, t, s) {
-  if (f.fbq) return;
-  n = f.fbq = function () {
-    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-  };
-  if (!f._fbq) f._fbq = n;
-  n.push = n;
-  n.loaded = true;
-  n.version = "2.0";
-  n.queue = [];
-  t = b.createElement(e);
-  t.async = true;
-  t.src = v;
-  s = b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t, s);
-})(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+(function (win) {
+  if (win.fbq) return;
 
-fbq("init", "787421167171883");
-fbq("track", "PageView");
+  var queue = [];
+  var pixelId = "PORTFOLIO_PIXEL_000000";
+
+  var fbq = function () {
+    queue.push(Array.prototype.slice.call(arguments));
+  };
+
+  fbq.push = fbq;
+  fbq.loaded = false;
+  fbq.version = "portfolio-stub";
+  fbq.queue = queue;
+  fbq.pixelId = pixelId;
+
+  win.fbq = fbq;
+  if (!win._fbq) win._fbq = fbq;
+
+  // Portfolio edition: preserve the event API without loading Facebook Pixel.
+  fbq("init", pixelId);
+})(window);

@@ -72,8 +72,10 @@ See [docs/public-boundary.md](docs/public-boundary.md).
 
 ```bash
 npm ci
-npm run verify
+npm run check
 ```
+
+`npm run check` is the main full validation command. It runs tests, JavaScript lint, CSS lint, the full build, SEO and structural validation, clean URL checks, EN/DA structure checks, image manifest validation, and the portfolio public-safety gate.
 
 Runtime validation can be run after serving the built output:
 
@@ -84,3 +86,11 @@ RUNTIME_SEO_BASE_URL=https://your-deployment.example npm run validate:runtime
 ## Portfolio Context
 
 This is evidence of maintaining a real public web surface with validation, bilingual structure, SEO hygiene, and explicit operational boundaries. The live business website may be used as a reference point, but this repository remains a curated public-safe engineering edition.
+
+## My Role
+
+I built and maintain the production website and its supporting validation system, including page architecture, bilingual content operations, build tooling, testing, SEO checks, and production verification.
+
+## AI-Assisted Development
+
+I use AI throughout implementation, debugging, testing, documentation, and iteration. I remain responsible for architecture, requirements, validation, production behavior, and accepting or rejecting generated changes.

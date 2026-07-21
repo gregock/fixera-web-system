@@ -1,6 +1,7 @@
 // @ts-nocheck
 (function (win, doc) {
   var INTERNAL_STORAGE_KEY = "fixera_internal_traffic";
+  var PORTFOLIO_GA_ID = "G-PORTFOLIO000";
   var params = new URLSearchParams(win.location.search);
 
   if (params.get("internal") === "true") {
@@ -43,24 +44,19 @@
     return;
   }
 
-  var GA_ID = "G-RP3M5GM5F2";
-
-  // 1. load GA script first
-  var s = doc.createElement("script");
-  s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
-  s.async = true;
-  doc.head.appendChild(s);
-
-  // 2. initialize dataLayer and gtag
   win.dataLayer = win.dataLayer || [];
   function gtag() {
     win.dataLayer.push(arguments);
   }
   win.gtag = gtag;
+  win.fixeraWindow = win.fixeraWindow || {};
+  win.fixeraWindow.gtag = gtag;
 
-  // 3. configure GA AFTER script load
-  s.onload = function () {
-    gtag("js", new Date());
-    gtag("config", GA_ID, { transport_type: "beacon" });
-  };
+  // Portfolio edition: keep the integration shape but never load external tracking.
+  gtag("js", new Date());
+  gtag("config", PORTFOLIO_GA_ID, {
+    transport_type: "beacon",
+    public_safe: true,
+    send_page_view: false,
+  });
 })(window, document);

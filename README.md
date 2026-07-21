@@ -12,7 +12,7 @@ This repository is intentionally semi-anonymized: it keeps the public brand cont
 
 All visual media in this public edition is placeholder media. File names and paths are preserved to demonstrate the asset pipeline and page structure without publishing real customer, property, or job photos.
 
-Contact forms, lead capture endpoints, phone numbers, and private third-party form identifiers are intentionally disabled or sanitized in this edition.
+Public business identity and selected public contact references are retained where useful for verification, while active lead-capture endpoints and private third-party identifiers or configuration are disabled, removed, or replaced.
 
 ## Key Engineering Highlights
 
@@ -75,7 +75,7 @@ npm ci
 npm run check
 ```
 
-`npm run check` is the main full validation command. It runs tests, JavaScript lint, CSS lint, the full build, SEO and structural validation, clean URL checks, EN/DA structure checks, image manifest validation, and the portfolio public-safety gate.
+`npm run check` is the main full validation command. It runs tests, JavaScript lint, CSS lint, the full build, SEO and structural validation, clean URL checks, EN/DA structure checks, image manifest validation, public-safety validation, and internal Markdown documentation link validation.
 
 Runtime validation can be run after serving the built output:
 

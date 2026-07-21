@@ -28,12 +28,13 @@
     "validate:i18n": "node tools/validate-i18n-structure.mjs",
     "validate:clean-urls": "node tools/check-clean-urls.mjs",
     "validate:public-safety": "node scripts/validate-public-safety.mjs",
+    "validate:public-docs": "node scripts/validate-public-docs.mjs",
     "generate:page-manifest": "node tools/generate-page-manifest.mjs",
     "preview": "node scripts/preview.mjs",
     "build:dev": "npm-run-all build:assets build:css build:js build:html",
     "verify": "npm run build && npm run validate",
     "build:full": "npm run build && npm run verify",
-    "test": "node --test src/js/*.test.js",
+    "test": "node --test src/js/*.test.js scripts/*.test.mjs",
     "lint": "eslint \"src/**/*.js\"",
     "lint:fix": "eslint \"src/**/*.js\" --fix",
     "lint:css": "stylelint \"src/**/*.css\"",
@@ -41,7 +42,7 @@
     "format": "prettier --write .",
     "prepare": "if [ \"$VERCEL\" != \"1\" ]; then husky; fi",
     "check:no-em-dash": "node scripts/check-no-em-dash.mjs",
-    "check": "npm run test && npm run lint && npm run lint:css && npm run build && npm run validate && npm run validate:clean-urls && npm run validate:i18n && npm run validate:images && npm run validate:public-safety"
+    "check": "npm run test && npm run lint && npm run lint:css && npm run build && npm run validate && npm run validate:clean-urls && npm run validate:i18n && npm run validate:images && npm run validate:public-safety && npm run validate:public-docs"
   },
   "devDependencies": {
     "@eslint/js": "9.37.0",

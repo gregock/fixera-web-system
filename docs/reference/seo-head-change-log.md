@@ -38,5 +38,5 @@ Last synchronized: 2026-03-15
 Earlier line-by-line metadata edits remain part of repository history, but the active technical SEO state should now be read from:
 
 - [README.md](../../README.md)
-- [docs/reference/seo-strategy.md](./seo-strategy.md)
-- [docs/reference/QA-baseline.md](./QA-baseline.md)
+- [docs/README.md](../README.md)
+- [docs/reference/seo-architecture.md](./seo-architecture.md)

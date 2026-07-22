@@ -1,11 +1,33 @@
 import fs from 'fs';
 import path from 'path';
 
-export const forbiddenIds = [
-  ['G', 'RP3M5GM5F2'].join('-'),
-  ['787421', '167171883'].join(''),
-  ['pa5ufv6powcuglb6', '9ku9elmdklx2ev'].join('')
-];
+const placeholderValues = new Set([
+  '',
+  'portfolio-placeholder',
+  'disabled',
+  'none',
+  'not-configured',
+  'placeholder',
+  'replace-me',
+  'todo'
+]);
+
+function isAllowedPlaceholder(value) {
+  const normalized = String(value || '').trim().toLowerCase();
+  return placeholderValues.has(normalized) || normalized.startsWith('portfolio_');
+}
+
+function isRealLookingGa4MeasurementId(value) {
+  return /^G-[A-Z0-9]{6,}$/i.test(value) && !/portfolio|placeholder|example|sample|test/i.test(value);
+}
+
+function isRealLookingPixelId(value) {
+  return /^\d{8,20}$/.test(value);
+}
+
+function isRealLookingVerificationValue(value) {
+  return Boolean(String(value || '').trim()) && !isAllowedPlaceholder(value);
+}
 
 export const activeTrackingRules = [
   {
@@ -27,6 +49,50 @@ export const activeTrackingRules = [
   {
     label: 'Live Facebook domain verification token',
     regex: /<meta[^>]+name=["']facebook-domain-verification["'][^>]+content=["'](?!portfolio-placeholder)[^"']+/i
+  }
+];
+
+export const contextualPublicSafetyRules = [
+  {
+    label: 'GA4 measurement ID in tag loader',
+    findMatches(content) {
+      const matches = content.matchAll(/googletagmanager\.com\/gtag\/js\?id=(G-[A-Z0-9]{6,})/gi);
+      return [...matches]
+        .map((match) => match[1])
+        .filter((value) => isRealLookingGa4MeasurementId(value));
+    }
+  },
+  {
+    label: 'GA4 measurement ID in analytics configuration',
+    findMatches(content) {
+      const patterns = [
+        /gtag\(\s*['"]config['"]\s*,\s*['"](G-[A-Z0-9]{6,})['"]/gi,
+        /['"]measurement[_-]?id['"]\s*[:=]\s*['"](G-[A-Z0-9]{6,})['"]/gi,
+        /\bmeasurementId\b\s*[:=]\s*['"](G-[A-Z0-9]{6,})['"]/gi
+      ];
+
+      return patterns.flatMap((regex) =>
+        [...content.matchAll(regex)]
+          .map((match) => match[1])
+          .filter((value) => isRealLookingGa4MeasurementId(value))
+      );
+    }
+  },
+  {
+    label: 'Meta Pixel ID in fbq init',
+    findMatches(content) {
+      const matches = content.matchAll(/fbq\(\s*['"]init['"]\s*,\s*['"]?(\d{8,20})['"]?/gi);
+      return [...matches].map((match) => match[1]).filter((value) => isRealLookingPixelId(value));
+    }
+  },
+  {
+    label: 'Google site verification token',
+    findMatches(content) {
+      const matches = content.matchAll(/<meta[^>]+name=["']google-site-verification["'][^>]+content=["']([^"']*)["']/gi);
+      return [...matches]
+        .map((match) => match[1])
+        .filter((value) => isRealLookingVerificationValue(value));
+    }
   }
 ];
 
@@ -86,17 +152,18 @@ export function validatePublicSafety({
       checkedFiles += 1;
       const content = readFileSync(filePath, 'utf8');
 
-      for (const id of forbiddenIds) {
-        if (content.includes(id)) {
+      for (const rule of activeTrackingRules) {
+        if (rule.regex.test(content)) {
           failures.push({
             file: toRelative(projectRoot, filePath),
-            message: `forbidden production identifier found: ${id}`
+            message: `active production tracking pattern found: ${rule.label}`
           });
         }
       }
 
-      for (const rule of activeTrackingRules) {
-        if (rule.regex.test(content)) {
+      for (const rule of contextualPublicSafetyRules) {
+        const matches = rule.findMatches(content);
+        if (matches.length) {
           failures.push({
             file: toRelative(projectRoot, filePath),
             message: `active production tracking pattern found: ${rule.label}`

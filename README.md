@@ -94,3 +94,7 @@ I built and maintain the production website and its supporting validation system
 ## AI-Assisted Development
 
 I use AI throughout implementation, debugging, testing, documentation, and iteration. I remain responsible for architecture, requirements, validation, production behavior, and accepting or rejecting generated changes.
+
+## License
+
+This repository is available for portfolio review and professional evaluation under the [Portfolio Evaluation License](LICENSE). It is not open source and may not be used in production, redistributed, or incorporated into another project without prior written permission.
